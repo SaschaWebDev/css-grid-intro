@@ -42,6 +42,7 @@ img {
   grid-gap: 20px;
   padding: 0;
   list-style: none;
+  /* 4 fix nav elements 1fr each */
   grid-template-columns: repeat(4, 1fr);
 }
 
@@ -119,4 +120,19 @@ img {
 
 .top-box-b {
   grid-area: top-box-b;
+}
+
+/* Boxes */
+.boxes {
+  display: grid;
+  grid-gap: 20px;
+  /* More responsive and adaptive fits dynamic amounts to 1fr each */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.box {
+  background: var(--primary);
+  text-align: center;
+  padding: 1.5rem 2rem;
+  box-shadow: var(--shadow);
 }
